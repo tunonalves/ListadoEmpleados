@@ -38,10 +38,10 @@
 			<div class="col">
 				<div *ngFor = "let empleado of empleados; let i=index">
 					{{i+1}} : 
-					{{empleado.name}} 
-					{{empleado.lastname}} 
-					{{empleado.job}} 
-					{{empleado.salary}}
+					{{empleado.name}}
+					{{empleado.lastname}}
+					<span [ngStyle]="{color: empleado.job == 'Director' ? 'red':'green'}"> {{empleado.job}}</span>
+					<span [ngClass]="{parasalario: empleado.salary==130000}"> {{empleado.salary}}</span>
 				</div>
 			</div>
 		</div>
