@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<title>Listado Empleados</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col" style="text-align: center;">
+			<h1>{{title}}</h1>
+		</div>
+		<br>
+		<br>
+		<form class="form-group row">
+			<div class="form-group col-md-3">
+				<label for="name">NAME:</label>
+				<input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="cuadroname">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="name">LASTNAME:</label>
+				<input type="text" name="lastname" id="lastname" placeholder="lastname" class="form-control" [(ngModel)]="cuadrolastname">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="name">JOB:</label>
+				<input type="text" name="job" id="job" placeholder="job" class="form-control" [(ngModel)]="cuadrojob">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="name">SALARY:</label>
+				<input type="text" name="salary" id="salary" placeholder="salary" class="form-control" [(ngModel)]="cuadrosalary">
+			</div>
+		</form>
+		<br>
+		<div class="col"></div>
+			<button type="submit" class="btn btn-primary" (click)="addempleado()">SEND</button>
+		<br><br><br>
+	</div>
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div *ngFor = "let empleado of empleados; let i=index">
+					{{i+1}} : {{empleado.name}} {{empleado.lastname}} {{empleado.job}} {{empleado.salary}}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

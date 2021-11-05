@@ -10,12 +10,19 @@ export class AppComponent {
   title = 'Listado Empleados';
 
   empleados:Empleado[]=[
-    new Empleado("Federico","Tuñon Alves",130.000,"Director"),
-    new Empleado("Ayelen","Manzi",145.000,"Gerente"),
-    new Empleado("Pablo","Marciano",125.000,"Socio"),
-    new Empleado("Ruben","Bogey",80.000,"Empleado"),
+    new Empleado("Federico","Tuñon Alves",130000,"Director"),
+    new Empleado("Ayelen","Manzi",145000,"Gerente"),
+    new Empleado("Pablo","Marciano",125000,"Socio"),
+    new Empleado("Ruben","Bogey",80000,"Empleado"),
   ];
 
+  cuadroname:string="";
+  cuadrolastname:string="";
+  cuadrosalary:number=0;
+  cuadrojob:string="";
 
-
+  addempleado(){
+    let miempleado = new Empleado(this.cuadroname,this.cuadrolastname,this.cuadrosalary,this.cuadrojob);
+    this.empleados.push(miempleado);
+  }
 }
