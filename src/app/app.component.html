@@ -33,13 +33,15 @@
 		<br><br><br>
 	</div>
 
-
-
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<div *ngFor = "let empleado of empleados; let i=index">
-					{{i+1}} : {{empleado.name}} {{empleado.lastname}} {{empleado.job}} {{empleado.salary}}
+					{{i+1}} : 
+					{{empleado.name}} 
+					{{empleado.lastname}} 
+					{{empleado.job}} 
+					{{empleado.salary}}
 				</div>
 			</div>
 		</div>
